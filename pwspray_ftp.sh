@@ -12,8 +12,8 @@ for i in $( seq ${MYSTART} ${MYEND}); do
   ((MYCOUNTER++))
   if [[ $MYCOUNTER -eq 10 ]]; then
     date
-    echo "sleeping for 10 minutes and 30 seconds"
-    sleep 630
+    echo "sleeping for 11 min 1 sec"
+    sleep 661
     MYCOUNTER=0
   fi
 
