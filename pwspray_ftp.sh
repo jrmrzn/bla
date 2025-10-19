@@ -9,7 +9,7 @@ echo "Password is set to: ${MYPASS}"
 
 for i in $( seq ${MYSTART} ${MYEND}); do
 
-  (($MYCOUNTER++))
+  ((MYCOUNTER++))
   if [[ $MYCOUNTER -eq 10 ]]; then
     date
     echo "sleeping for 10 minutes"
